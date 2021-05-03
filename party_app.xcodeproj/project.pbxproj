@@ -95,6 +95,8 @@
 		ED26A78D2636DFB600DBA729 /* party_app */ = {
 			isa = PBXGroup;
 			children = (
+				EDBB5588263EFACA009CECF6 /* views */,
+				EDBB5587263EFAAF009CECF6 /* components */,
 				ED26A78E2636DFB600DBA729 /* party_appApp.swift */,
 				ED26A7902636DFB600DBA729 /* ContentView.swift */,
 				ED26A7922636DFB800DBA729 /* Assets.xcassets */,
@@ -128,6 +130,20 @@
 				ED26A7AD2636DFB800DBA729 /* Info.plist */,
 			);
 			path = party_appUITests;
+			sourceTree = "<group>";
+		};
+		EDBB5587263EFAAF009CECF6 /* components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		EDBB5588263EFACA009CECF6 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
