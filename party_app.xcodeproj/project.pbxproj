@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70DE9FA264191C90041EDFA /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE9F9264191C90041EDFA /* Background.swift */; };
+		A70DE9FC2641971E0041EDFA /* MyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70DE9FB2641971E0041EDFA /* MyText.swift */; };
+		A70DEA152641A4970041EDFA /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70DEA022641A4960041EDFA /* Montserrat-Regular.ttf */; };
+		A70DEA162641A4970041EDFA /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = A70DEA032641A4960041EDFA /* OFL.txt */; };
+		A70DEA1E2641A4970041EDFA /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70DEA0B2641A4970041EDFA /* Montserrat-Bold.ttf */; };
+		A70DEA1F2641A4970041EDFA /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70DEA0C2641A4970041EDFA /* Montserrat-Italic.ttf */; };
+		A70DEA242641A4970041EDFA /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A70DEA112641A4970041EDFA /* Montserrat-Medium.ttf */; };
 		ED26A78F2636DFB600DBA729 /* party_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26A78E2636DFB600DBA729 /* party_appApp.swift */; };
 		ED26A7912636DFB600DBA729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26A7902636DFB600DBA729 /* ContentView.swift */; };
 		ED26A7932636DFB800DBA729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED26A7922636DFB800DBA729 /* Assets.xcassets */; };
@@ -33,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A70DE9F9264191C90041EDFA /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		A70DE9FB2641971E0041EDFA /* MyText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyText.swift; sourceTree = "<group>"; };
+		A70DEA022641A4960041EDFA /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		A70DEA032641A4960041EDFA /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		A70DEA0B2641A4970041EDFA /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		A70DEA0C2641A4970041EDFA /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		A70DEA112641A4970041EDFA /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		ED26A78B2636DFB600DBA729 /* party_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = party_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED26A78E2636DFB600DBA729 /* party_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = party_appApp.swift; sourceTree = "<group>"; };
 		ED26A7902636DFB600DBA729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +86,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A70DE9F8264191760041EDFA /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				A70DE9F9264191C90041EDFA /* Background.swift */,
+				A70DE9FB2641971E0041EDFA /* MyText.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		A70DE9FD2641A3420041EDFA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A70DE9FE2641A4490041EDFA /* Montserrat */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A70DE9FE2641A4490041EDFA /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				A70DEA0B2641A4970041EDFA /* Montserrat-Bold.ttf */,
+				A70DEA0C2641A4970041EDFA /* Montserrat-Italic.ttf */,
+				A70DEA112641A4970041EDFA /* Montserrat-Medium.ttf */,
+				A70DEA022641A4960041EDFA /* Montserrat-Regular.ttf */,
+				A70DEA032641A4960041EDFA /* OFL.txt */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
 		ED26A7822636DFB600DBA729 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +138,8 @@
 		ED26A78D2636DFB600DBA729 /* party_app */ = {
 			isa = PBXGroup;
 			children = (
-				EDBB5588263EFACA009CECF6 /* views */,
-				EDBB5587263EFAAF009CECF6 /* components */,
+				A70DE9FD2641A3420041EDFA /* Fonts */,
+				A70DE9F8264191760041EDFA /* Modifiers */,
 				ED26A78E2636DFB600DBA729 /* party_appApp.swift */,
 				ED26A7902636DFB600DBA729 /* ContentView.swift */,
 				ED26A7922636DFB800DBA729 /* Assets.xcassets */,
@@ -130,20 +173,6 @@
 				ED26A7AD2636DFB800DBA729 /* Info.plist */,
 			);
 			path = party_appUITests;
-			sourceTree = "<group>";
-		};
-		EDBB5587263EFAAF009CECF6 /* components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = components;
-			sourceTree = "<group>";
-		};
-		EDBB5588263EFACA009CECF6 /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +278,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A70DEA1F2641A4970041EDFA /* Montserrat-Italic.ttf in Resources */,
+				A70DEA162641A4970041EDFA /* OFL.txt in Resources */,
 				ED26A7962636DFB800DBA729 /* Preview Assets.xcassets in Resources */,
+				A70DEA242641A4970041EDFA /* Montserrat-Medium.ttf in Resources */,
+				A70DEA1E2641A4970041EDFA /* Montserrat-Bold.ttf in Resources */,
+				A70DEA152641A4970041EDFA /* Montserrat-Regular.ttf in Resources */,
 				ED26A7932636DFB800DBA729 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +311,8 @@
 			files = (
 				ED26A7912636DFB600DBA729 /* ContentView.swift in Sources */,
 				ED26A78F2636DFB600DBA729 /* party_appApp.swift in Sources */,
+				A70DE9FC2641971E0041EDFA /* MyText.swift in Sources */,
+				A70DE9FA264191C90041EDFA /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
