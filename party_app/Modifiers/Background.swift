@@ -16,7 +16,7 @@ struct Background: ViewModifier {
                 startPoint: .top,
                 endPoint: .bottom
             ).edgesIgnoringSafeArea(.all)
-            // Color("3").edgesIgnoringSafeArea(.all)
+
             content
         }
     }
