@@ -38,7 +38,7 @@ struct MyText: ViewModifier {
             self.size = 24.0
         case .Regular:
             self.font = MontserratFont.regular
-            self.size = 18
+            self.size = 18.0
         case .Small:
             self.font = MontserratFont.regular
             self.size = 12.0
