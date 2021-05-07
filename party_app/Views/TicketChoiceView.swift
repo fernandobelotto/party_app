@@ -69,21 +69,3 @@ struct TicketChoiceView: View {
         }
     }
 }
-
-struct TicketCardButton: View {
-    let card: TicketCard
-    let action: () -> ()
-    
-    init(label: String, price: String, action: @escaping () -> ()) {
-        self.card = TicketCard(label: label, price: price, color: Color("8"))
-        self.action = action
-    }
-    
-    var body: some View {
-        Button(action: {
-            self.action()
-        }) {
-            self.card
-        }
-    }
-}
