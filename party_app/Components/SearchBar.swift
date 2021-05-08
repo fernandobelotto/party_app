@@ -15,12 +15,14 @@ struct SearchBar: View {
         HStack (alignment: .center) {
             HStack (alignment: .center) {
                 Image(systemName: "magnifyingglass")
-                    .padding(.leading, 8)
-                TextField("Search ...", text: $text)
-                    .accentColor(Color("Black"))
-                    .modifier(MyText(color: Color("Black"), type: .Regular))
-                    .padding(.vertical, 4)
-                    .padding(.horizontal, 8)
+                    .padding(.leading, 8.0)
+                    .foregroundColor(Color("White"))
+                
+                TextField("Search", text: $text)
+                    .accentColor(Color("White"))
+                    .modifier(MyText(color: Color("White"), type: .Regular))
+                    .padding(.vertical, 4.0)
+                    .padding(.horizontal, 8.0)
                     .onTapGesture {
                         withAnimation {
                             self.isEditing = true
@@ -35,14 +37,14 @@ struct SearchBar: View {
                     }) {
                         Image(systemName: "xmark.circle.fill")
                             .foregroundColor(Color("3"))
-                            .padding(.trailing, 8)
+                            .padding(.trailing, 8.0)
                     }
                     .transition(.opacity.combined(with: .move(edge: .trailing)))
                 }
                 
             }
-            .background(Color("White"))
-            .cornerRadius(4)
+            .background(Color("Black"))
+            .cornerRadius(4.0)
             
             if isEditing {
                 Button(action: {
@@ -52,14 +54,14 @@ struct SearchBar: View {
                     }
                     
                     // Dismiss keyboard
-//                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }) {
                     Text("Cancel")
                         .modifier(MyText(color: Color("White"), type: .Regular))
                 }
-                .padding(.leading, 8)
+                .padding(.leading, 8.0)
             }
         }
-        .padding(.horizontal, 23)
+        .padding(.horizontal, 24.0)
     }
 }
