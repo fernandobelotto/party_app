@@ -17,6 +17,18 @@
 		A71084FD2642E3430095EDAE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71084FC2642E3430095EDAE /* Card.swift */; };
 		A73AFFD42645815700225B24 /* TicketChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73AFFD32645815700225B24 /* TicketChoiceView.swift */; };
 		A73AFFD62645820200225B24 /* TicketCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73AFFD52645820200225B24 /* TicketCard.swift */; };
+		A7534D3A2647087F00A93A49 /* StringFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D2E2647087F00A93A49 /* StringFactory.swift */; };
+		A7534D3B2647087F00A93A49 /* PurchasedTicketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D2F2647087F00A93A49 /* PurchasedTicketFactory.swift */; };
+		A7534D3C2647087F00A93A49 /* TicketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D302647087F00A93A49 /* TicketFactory.swift */; };
+		A7534D3D2647087F00A93A49 /* EventFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D312647087F00A93A49 /* EventFactory.swift */; };
+		A7534D3E2647087F00A93A49 /* UserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D322647087F00A93A49 /* UserFactory.swift */; };
+		A7534D3F2647087F00A93A49 /* TicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D342647087F00A93A49 /* TicketModel.swift */; };
+		A7534D402647087F00A93A49 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D352647087F00A93A49 /* Session.swift */; };
+		A7534D412647087F00A93A49 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D362647087F00A93A49 /* EventModel.swift */; };
+		A7534D422647087F00A93A49 /* EventsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D372647087F00A93A49 /* EventsRepository.swift */; };
+		A7534D432647087F00A93A49 /* PurchasedTicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D382647087F00A93A49 /* PurchasedTicketModel.swift */; };
+		A7534D442647087F00A93A49 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D392647087F00A93A49 /* UserModel.swift */; };
+		A7534D462647095200A93A49 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7534D452647095200A93A49 /* ProfileView.swift */; };
 		A75485C22642B5BD00925319 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75485C12642B5BD00925319 /* Buttons.swift */; };
 		A75485C62642C63E00925319 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75485C52642C63E00925319 /* SearchBar.swift */; };
 		A75485C92642D30700925319 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75485C82642D30700925319 /* SearchView.swift */; };
@@ -60,6 +72,18 @@
 		A71084FC2642E3430095EDAE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A73AFFD32645815700225B24 /* TicketChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketChoiceView.swift; sourceTree = "<group>"; };
 		A73AFFD52645820200225B24 /* TicketCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCard.swift; sourceTree = "<group>"; };
+		A7534D2E2647087F00A93A49 /* StringFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFactory.swift; sourceTree = "<group>"; };
+		A7534D2F2647087F00A93A49 /* PurchasedTicketFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasedTicketFactory.swift; sourceTree = "<group>"; };
+		A7534D302647087F00A93A49 /* TicketFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketFactory.swift; sourceTree = "<group>"; };
+		A7534D312647087F00A93A49 /* EventFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventFactory.swift; sourceTree = "<group>"; };
+		A7534D322647087F00A93A49 /* UserFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFactory.swift; sourceTree = "<group>"; };
+		A7534D342647087F00A93A49 /* TicketModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketModel.swift; sourceTree = "<group>"; };
+		A7534D352647087F00A93A49 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		A7534D362647087F00A93A49 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		A7534D372647087F00A93A49 /* EventsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsRepository.swift; sourceTree = "<group>"; };
+		A7534D382647087F00A93A49 /* PurchasedTicketModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasedTicketModel.swift; sourceTree = "<group>"; };
+		A7534D392647087F00A93A49 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A7534D452647095200A93A49 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A75485C12642B5BD00925319 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		A75485C52642C63E00925319 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		A75485C82642D30700925319 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -135,6 +159,33 @@
 			path = Montserrat;
 			sourceTree = "<group>";
 		};
+		A7534D2D2647087F00A93A49 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				A7534D2E2647087F00A93A49 /* StringFactory.swift */,
+				A7534D2F2647087F00A93A49 /* PurchasedTicketFactory.swift */,
+				A7534D302647087F00A93A49 /* TicketFactory.swift */,
+				A7534D312647087F00A93A49 /* EventFactory.swift */,
+				A7534D322647087F00A93A49 /* UserFactory.swift */,
+			);
+			name = Factory;
+			path = party_app/Factory;
+			sourceTree = SOURCE_ROOT;
+		};
+		A7534D332647087F00A93A49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7534D342647087F00A93A49 /* TicketModel.swift */,
+				A7534D352647087F00A93A49 /* Session.swift */,
+				A7534D362647087F00A93A49 /* EventModel.swift */,
+				A7534D372647087F00A93A49 /* EventsRepository.swift */,
+				A7534D382647087F00A93A49 /* PurchasedTicketModel.swift */,
+				A7534D392647087F00A93A49 /* UserModel.swift */,
+			);
+			name = Model;
+			path = party_app/Model;
+			sourceTree = SOURCE_ROOT;
+		};
 		A75485C02642B58A00925319 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +206,7 @@
 				A7E1F3F6264408DB00212F0F /* EventDetailsView.swift */,
 				A7E8416F2645630900AAAE58 /* TicketDetailView.swift */,
 				A73AFFD32645815700225B24 /* TicketChoiceView.swift */,
+				A7534D452647095200A93A49 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +234,8 @@
 		ED26A78D2636DFB600DBA729 /* party_app */ = {
 			isa = PBXGroup;
 			children = (
+				A7534D2D2647087F00A93A49 /* Factory */,
+				A7534D332647087F00A93A49 /* Model */,
 				A75485C72642D2ED00925319 /* Views */,
 				A75485C02642B58A00925319 /* Components */,
 				A70DE9FD2641A3420041EDFA /* Fonts */,
@@ -356,16 +410,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75485C22642B5BD00925319 /* Buttons.swift in Sources */,
+				A7534D432647087F00A93A49 /* PurchasedTicketModel.swift in Sources */,
 				A7E1F3F92644099400212F0F /* DateCard.swift in Sources */,
+				A7534D3B2647087F00A93A49 /* PurchasedTicketFactory.swift in Sources */,
 				ED26A7912636DFB600DBA729 /* ContentView.swift in Sources */,
+				A7534D3E2647087F00A93A49 /* UserFactory.swift in Sources */,
+				A7534D3F2647087F00A93A49 /* TicketModel.swift in Sources */,
 				A7E8416E2645621A00AAAE58 /* FieldValue.swift in Sources */,
+				A7534D442647087F00A93A49 /* UserModel.swift in Sources */,
+				A7534D3A2647087F00A93A49 /* StringFactory.swift in Sources */,
 				ED26A78F2636DFB600DBA729 /* party_appApp.swift in Sources */,
+				A7534D3C2647087F00A93A49 /* TicketFactory.swift in Sources */,
 				A75485C92642D30700925319 /* SearchView.swift in Sources */,
+				A7534D3D2647087F00A93A49 /* EventFactory.swift in Sources */,
+				A7534D462647095200A93A49 /* ProfileView.swift in Sources */,
+				A7534D422647087F00A93A49 /* EventsRepository.swift in Sources */,
 				A7E1F3F7264408DB00212F0F /* EventDetailsView.swift in Sources */,
 				A70DE9FC2641971E0041EDFA /* MyText.swift in Sources */,
+				A7534D402647087F00A93A49 /* Session.swift in Sources */,
 				A70DE9FA264191C90041EDFA /* Background.swift in Sources */,
 				A75485C62642C63E00925319 /* SearchBar.swift in Sources */,
 				A73AFFD42645815700225B24 /* TicketChoiceView.swift in Sources */,
+				A7534D412647087F00A93A49 /* EventModel.swift in Sources */,
 				A71084FD2642E3430095EDAE /* Card.swift in Sources */,
 				A7E841702645630900AAAE58 /* TicketDetailView.swift in Sources */,
 				A73AFFD62645820200225B24 /* TicketCard.swift in Sources */,

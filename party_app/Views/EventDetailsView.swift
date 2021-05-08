@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct EventDetailsView: View {
+    let event: EventModel
     @State private var showingSheet = false
-
+    
     var body: some View {
         ZStack (alignment: .top) {
             GeometryReader { geometry in
@@ -19,24 +20,24 @@ struct EventDetailsView: View {
                 ScrollView {
                     VStack (alignment: .leading) {
                         
-                        LocationCard()
+                        Image(self.event.imageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .padding(.vertical, 16.0)
                         
                         VStack (alignment: .leading) {
-                            Text("Chopada".uppercased())
-                                .modifier(MyText(color: Color("White"), type: .Small))
-                            
                             HStack (alignment: .center) {
-                                Text("Chopada da Agrícola")
+                                Text(event.name)
                                     .modifier(MyText(color: Color("White"), type: .H2))
                                     .fixedSize(horizontal: false, vertical: true)
+                                    .padding(.trailing, 64.0)
                                 
                                 Spacer()
                                 
-                                DateCard(color: Color("3"))
+                                DateCard(color: Color("3"), date: self.event.date)
                             }
                             
-                            Text("Starting 10:00 pm")
+                            Text("Starting \(event.getStartingTime())")
                                 .modifier(MyText(color: Color("White"), type: .Small))
                         }
                         .padding(.vertical, 16.0)
@@ -50,15 +51,16 @@ struct EventDetailsView: View {
                                 
                                 ScrollView (.horizontal) {
                                     HStack (alignment: .center) {
-                                        ForEach(0 ..<  20) { i in
-                                            Text("\(i)")
-                                                .modifier(MyText(color: Color("White"), type: .H1))
+                                        ForEach(self.event.getParticipants()) { participant in
+                                            Image(participant.imageName)
+                                                .resizable()
+                                                .frame(width: 40.0, height: 40.0)
                                         }
                                     }
                                 }
                             }
                         }
-                        .sheet(isPresented: $showingSheet) { EventDetailsSheetView() }
+                        .sheet(isPresented: $showingSheet) { EventDetailsSheetView(event: self.event) }
                         .padding(.vertical, 16.0)
                         
                         VStack (alignment: .leading) {
@@ -102,6 +104,7 @@ struct LocationCard: View {
 }
 
 struct EventDetailsSheetView: View {
+    let event: EventModel
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
@@ -117,8 +120,8 @@ struct EventDetailsSheetView: View {
                 
                 ScrollView {
                     VStack (alignment: .leading) {
-                        ForEach(0 ..< 20) { i in
-                            Text("Person number \(i)")
+                        ForEach(self.event.getParticipants()) { participant in
+                            Text(participant.name)
                                 .modifier(MyText(color: Color("White"), type: .H2))
                                 .padding(.vertical, 12.0)
                         }

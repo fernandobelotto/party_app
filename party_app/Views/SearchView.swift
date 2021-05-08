@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State var searchText = ""
+    @StateObject var session = Session()
     
     var body: some View {
         VStack (alignment: .leading) {
@@ -31,6 +32,9 @@ struct SearchView: View {
 }
 
 struct RecentCard: View {
+    @StateObject var session = Session()
+    let recentEvents = EventsRepository().getEvents()
+    
     var body: some View {
         ZStack (alignment: .top) {
             GeometryReader { geometry in
@@ -39,9 +43,9 @@ struct RecentCard: View {
                 
                 ScrollView {
                     VStack (alignment: .leading) {
-                        ForEach(0 ..< 20) { i in
-                            Text("Person number \(i)")
-                                .modifier(MyText(color: Color("White"), type: .H2))
+                        ForEach(recentEvents) { event in
+                            Text(event.name)
+                                .modifier(MyText(color: Color("White"), type: .Regular))
                                 .padding(.vertical, 12.0)
                         }
                     }

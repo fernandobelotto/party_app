@@ -11,7 +11,9 @@ import Foundation
 struct EventModel: Identifiable {
     var id = Double.random(in: 0...10000)
     let name: String
+    let imageName: String
     let date: Date
+    let local: String
     var participants: [UserModel]
     var tickets: [TicketModel]
     
@@ -29,13 +31,13 @@ struct EventModel: Identifiable {
     
     func getDateAndTime() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy-hh:mm"
+        dateFormatter.dateFormat = "dd/MM/yyyy - hh:mm a"
         return dateFormatter.string(from: date)
     }
     
     func getStartingTime() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm"
+        dateFormatter.dateFormat = "hh:mm a"
         return dateFormatter.string(from: date)
     }
 }
