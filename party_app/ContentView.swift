@@ -27,7 +27,7 @@ struct ContentView: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
             
-            TicketDetailView(ticket: self.session.getCurrentUser().userTickets[0])
+            TicketChoiceView(eventsRepository.getEvents()[0])
                 .tabItem {
                     Label("Tickets", systemImage: "ticket.fill")
                 }
