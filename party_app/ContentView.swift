@@ -17,7 +17,7 @@ struct ContentView: View {
       }
     var body: some View {
         TabView {
-            EventDetailsView(event: self.eventsRepository.getEvents()[0])
+            EventListView(eventsRepository: self.eventsRepository)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
@@ -27,7 +27,7 @@ struct ContentView: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
             
-            TicketDetailView(ticket: self.session.getCurrentUser().userTickets[0])
+            MyEventsView(session: session)
                 .tabItem {
                     Label("Tickets", systemImage: "ticket.fill")
                 }
@@ -47,18 +47,5 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
                 .previewDevice("iPhone 12")
         }
-    }
-}
-
-struct TicketView: View {
-    var body: some View {
-        Text("Tickets")
-    }
-}
-
-
-struct HomeView: View {
-    var body: some View {
-        Text("Home")
     }
 }

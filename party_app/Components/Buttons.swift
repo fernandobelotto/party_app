@@ -29,7 +29,7 @@ struct MyButton: View {
         case .Secondary:
             self.fillColor = nil
             self.strokeColor = Color("10")
-            self.textColor = Color("White")
+            self.textColor = Color(.black)
         }
     }
     
@@ -48,4 +48,14 @@ struct MyButton: View {
         }
     }
     
+}
+
+
+struct MyButton_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            MyButton(text: "Primary", type: .Primary)
+            MyButton(text: "Secondary", type: .Secondary)
+        }.previewLayout(.sizeThatFits)
+    }
 }
