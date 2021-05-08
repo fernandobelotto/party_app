@@ -9,19 +9,34 @@ import SwiftUI
 
 struct TicketChoiceView: View {
     
-    @State var selected = [false, false, false]
-    @State var ticketCards = [
-        TicketCard(label: "PISTA", price: "R$20,00", color: Color("8")),
-        TicketCard(label: "VIP", price: "R$30,00", color: Color("8")),
-        TicketCard(label: "CAMAROTE", price: "R$40,00", color: Color("8"))
-    ]
+    let event: EventModel
+    @State var selected: [Bool] = []
+    @State var ticketCards: [TicketCard] = []
+    
+    init(_ event: EventModel) {
+        self.event = event
+        var initSelected = [Bool]()
+        var initTicketCards = [TicketCard]()
+        
+        for ticketModel in self.event.getTickets() {
+            initSelected.append(false)
+            initTicketCards.append(TicketCard(
+                label: ticketModel.description,
+                price: ticketModel.displayablePrice,
+                color: Color("8")
+            ))
+        }
+        
+        _selected = State(initialValue: initSelected)
+        _ticketCards = State(initialValue: initTicketCards)
+    }
     
     var body: some View {
         ZStack (alignment: .center) {
             Card(color: Color("Black"))
             
             VStack (alignment: .center) {
-                Text("Chopada da Agrícola")
+                Text(self.event.name)
                     .modifier(MyText(color: Color("White"), type: .H2))
                     .padding(.top, 24.0)
                 
@@ -32,7 +47,7 @@ struct TicketChoiceView: View {
                 Spacer()
                 
                 VStack (alignment: .center) {
-                    ForEach(0 ..< 3) { i in
+                    ForEach(0 ..< self.selected.count) { i in
                         Button(action: {
                             self.select(i)
                         }) {
