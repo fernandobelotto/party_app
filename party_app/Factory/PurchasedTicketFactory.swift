@@ -10,7 +10,7 @@ import Foundation
 extension PurchasedTicketModel {
     static func random(
         ticket: TicketModel = TicketModel.random(),
-        event: EventModel = EventModel.random()
+        event: EventModel = EventModel.random(imageName: "Biorgia")
     ) -> PurchasedTicketModel {
         return PurchasedTicketModel(ticket: ticket, event: event)
     }

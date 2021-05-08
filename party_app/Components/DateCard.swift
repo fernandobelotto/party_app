@@ -9,15 +9,29 @@ import SwiftUI
 
 struct DateCard: View {
     let color: Color?
+    let monthString: String
+    let dayString: String
+
+    init(color: Color?, date: Date) {
+        self.color = color
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "dd"
+        self.dayString = formatter.string(from: date)
+        
+        formatter.dateFormat = "MMMM"
+        self.monthString = String(formatter.string(from: date).uppercased().prefix(3))
+    }
     
     var body: some View {
         ZStack (alignment: .center) {
             RoundedRectangle(cornerRadius: 8.0)
                 .fill(self.color ?? Color("3"))
             VStack (alignment: .center) {
-                Text("FEV")
+                Text(self.monthString)
                     .modifier(MyText(color: Color("White"), type: .Regular))
-                Text("05")
+                Text(self.dayString)
                     .modifier(MyText(color: Color("White"), type: .Regular))
             }
         }

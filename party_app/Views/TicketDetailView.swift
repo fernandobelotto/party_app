@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct TicketDetailView: View {
+    let ticket: PurchasedTicketModel
+    @StateObject var session = Session()
+    
     var body: some View {
         ZStack (alignment: .center) {
             Card(color: Color("Black"))
             
             VStack (alignment: .center) {
-                Text("Chopada da Agrícola")
+                Text(self.ticket.event.name)
                     .modifier(MyText(color: Color("White"), type: .H2))
                     .padding(.top, 24.0)
                 
@@ -22,22 +25,17 @@ struct TicketDetailView: View {
                 VStack (alignment: .leading) {
                     FieldValue(
                         field: "name",
-                        value: "Juliana Moreira"
+                        value: self.session.getCurrentUser().name
                     )
                     
                     FieldValue(
                         field: "local",
-                        value: "Barão Geraldo"
+                        value: self.ticket.event.local
                     )
                     
                     FieldValue(
-                        field: "date",
-                        value: "seg, 05/02/2047"
-                    )
-                    
-                    FieldValue(
-                        field: "time",
-                        value: "22:00h - 04:00h"
+                        field: "date and time",
+                        value: self.ticket.event.getDateAndTime()
                     )
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -45,7 +43,7 @@ struct TicketDetailView: View {
                 
                 Spacer()
                 
-                QRCode()
+                Image("QRCode")
                 
                 Spacer()
                 
@@ -59,12 +57,5 @@ struct TicketDetailView: View {
         }
         .padding(24.0)
         .modifier(Background())
-    }
-}
-
-struct QRCode: View {
-    var body: some View {
-        Card(color: Color("White"))
-            .frame(width: 120.0, height: 120.0)
     }
 }

@@ -20,7 +20,7 @@ class Session: ObservableObject {
         let participants = [UserModel.random(), UserModel.random(), UserModel.random() ,UserModel.random()]
         let tickets = [TicketModel(description: "Pista - 1 lote", price: 25), TicketModel(description: "Vip - 1 lote", price: 35), TicketModel(description: "Camarote - 1 lote", price: 50)]
         
-        let event = EventModel.random(name: "Chopada da Agrícola", date: eventDate, participants: participants, tickets: tickets)
+        let event = EventModel.random(name: "Chopada da Agrícola", imageName: "ChopadaDaAgricola", date: eventDate, local: "Barão Geraldo", participants: participants, tickets: tickets)
         
         let userTicket = PurchasedTicketModel(ticket: tickets[0], event: event)
         currentUser = UserModel.random(name: "Juliana Moreira", imageName: "userImage1", userTickets: [userTicket])
