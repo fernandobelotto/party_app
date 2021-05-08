@@ -37,6 +37,10 @@
 		A7E1F3F92644099400212F0F /* DateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E1F3F82644099400212F0F /* DateCard.swift */; };
 		A7E8416E2645621A00AAAE58 /* FieldValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8416D2645621A00AAAE58 /* FieldValue.swift */; };
 		A7E841702645630900AAAE58 /* TicketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E8416F2645630900AAAE58 /* TicketDetailView.swift */; };
+		DB7CC8402647298B00C01EC0 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC83F2647298B00C01EC0 /* EventListView.swift */; };
+		DB7CC8452647385D00C01EC0 /* EventPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC8442647385D00C01EC0 /* EventPreview.swift */; };
+		DB7CC84A264744DF00C01EC0 /* EventPreviewWithTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC849264744DF00C01EC0 /* EventPreviewWithTicket.swift */; };
+		DB7CC8522647537E00C01EC0 /* MyEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7CC8512647537E00C01EC0 /* MyEventsView.swift */; };
 		ED26A78F2636DFB600DBA729 /* party_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26A78E2636DFB600DBA729 /* party_appApp.swift */; };
 		ED26A7912636DFB600DBA729 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED26A7902636DFB600DBA729 /* ContentView.swift */; };
 		ED26A7932636DFB800DBA729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED26A7922636DFB800DBA729 /* Assets.xcassets */; };
@@ -93,6 +97,10 @@
 		A7E1F3F82644099400212F0F /* DateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCard.swift; sourceTree = "<group>"; };
 		A7E8416D2645621A00AAAE58 /* FieldValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValue.swift; sourceTree = "<group>"; };
 		A7E8416F2645630900AAAE58 /* TicketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailView.swift; sourceTree = "<group>"; };
+		DB7CC83F2647298B00C01EC0 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		DB7CC8442647385D00C01EC0 /* EventPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreview.swift; sourceTree = "<group>"; };
+		DB7CC849264744DF00C01EC0 /* EventPreviewWithTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewWithTicket.swift; sourceTree = "<group>"; };
+		DB7CC8512647537E00C01EC0 /* MyEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsView.swift; sourceTree = "<group>"; };
 		ED26A78B2636DFB600DBA729 /* party_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = party_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED26A78E2636DFB600DBA729 /* party_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = party_appApp.swift; sourceTree = "<group>"; };
 		ED26A7902636DFB600DBA729 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,12 +200,14 @@
 		A75485C02642B58A00925319 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DB7CC8442647385D00C01EC0 /* EventPreview.swift */,
 				A75485C12642B5BD00925319 /* Buttons.swift */,
 				A75485C52642C63E00925319 /* SearchBar.swift */,
 				A71084FC2642E3430095EDAE /* Card.swift */,
 				A7E1F3F82644099400212F0F /* DateCard.swift */,
 				A7E8416D2645621A00AAAE58 /* FieldValue.swift */,
 				A73AFFD52645820200225B24 /* TicketCard.swift */,
+				DB7CC849264744DF00C01EC0 /* EventPreviewWithTicket.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -210,6 +220,8 @@
 				A7E8416F2645630900AAAE58 /* TicketDetailView.swift */,
 				A73AFFD32645815700225B24 /* TicketChoiceView.swift */,
 				A7534D452647095200A93A49 /* ProfileView.swift */,
+				DB7CC83F2647298B00C01EC0 /* EventListView.swift */,
+				DB7CC8512647537E00C01EC0 /* MyEventsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -413,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75485C22642B5BD00925319 /* Buttons.swift in Sources */,
+				DB7CC8522647537E00C01EC0 /* MyEventsView.swift in Sources */,
 				A7534D432647087F00A93A49 /* PurchasedTicketModel.swift in Sources */,
 				A7E1F3F92644099400212F0F /* DateCard.swift in Sources */,
 				A7534D3B2647087F00A93A49 /* PurchasedTicketFactory.swift in Sources */,
@@ -421,6 +434,7 @@
 				A7534D3F2647087F00A93A49 /* TicketModel.swift in Sources */,
 				A7E8416E2645621A00AAAE58 /* FieldValue.swift in Sources */,
 				A7534D442647087F00A93A49 /* UserModel.swift in Sources */,
+				DB7CC8452647385D00C01EC0 /* EventPreview.swift in Sources */,
 				A7534D3A2647087F00A93A49 /* StringFactory.swift in Sources */,
 				ED26A78F2636DFB600DBA729 /* party_appApp.swift in Sources */,
 				A7534D3C2647087F00A93A49 /* TicketFactory.swift in Sources */,
@@ -428,9 +442,11 @@
 				A7534D3D2647087F00A93A49 /* EventFactory.swift in Sources */,
 				A7534D462647095200A93A49 /* ProfileView.swift in Sources */,
 				A7534D422647087F00A93A49 /* EventsRepository.swift in Sources */,
+				DB7CC84A264744DF00C01EC0 /* EventPreviewWithTicket.swift in Sources */,
 				A7E1F3F7264408DB00212F0F /* EventDetailsView.swift in Sources */,
 				A70DE9FC2641971E0041EDFA /* MyText.swift in Sources */,
 				A7534D402647087F00A93A49 /* Session.swift in Sources */,
+				DB7CC8402647298B00C01EC0 /* EventListView.swift in Sources */,
 				A7534D482647267400A93A49 /* UsersRepository.swift in Sources */,
 				A70DE9FA264191C90041EDFA /* Background.swift in Sources */,
 				A75485C62642C63E00925319 /* SearchBar.swift in Sources */,

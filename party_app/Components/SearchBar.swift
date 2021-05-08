@@ -39,7 +39,11 @@ struct SearchBar: View {
                             .foregroundColor(Color("3"))
                             .padding(.trailing, 8.0)
                     }
-                    .transition(.opacity.combined(with: .move(edge: .trailing)))
+                    .transition(
+                        AnyTransition.opacity.combined(
+                            with: AnyTransition.move(edge: .trailing)
+                        )
+                    )
                 }
                 
             }
