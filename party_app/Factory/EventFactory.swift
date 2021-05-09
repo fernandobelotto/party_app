@@ -9,6 +9,7 @@ import Foundation
 
 extension EventModel {
     static func random(
+        id: String = String.random(),
         name: String = String.random(),
         imageName: String,
         date: Date = Date(),
@@ -16,6 +17,6 @@ extension EventModel {
         participants: [UserModel] = [UserModel.random()],
         tickets:[TicketModel] = [TicketModel.random()]
     ) -> EventModel {
-        return EventModel(name: name, imageName: imageName, date: date, local: local, participants: participants, tickets: tickets)
+        return EventModel(id: id, name: name, imageName: imageName, date: date, local: local, participants: participants, tickets: tickets)
     }
 }

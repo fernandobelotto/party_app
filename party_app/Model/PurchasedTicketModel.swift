@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PurchasedTicketModel: Identifiable {
+struct PurchasedTicketModel: Codable, Identifiable {
     var id = Double.random(in: 0...10000)
     let ticket: TicketModel
     let event: EventModel

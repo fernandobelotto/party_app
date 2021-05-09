@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct UserModel: Identifiable {
-    var id = Double.random(in: 0...10000)
+struct UserModel: Codable, Identifiable {
+    var id: String
     let name: String
     let imageName: String
     var userTickets: [PurchasedTicketModel] = []

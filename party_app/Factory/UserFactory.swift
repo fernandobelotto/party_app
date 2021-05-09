@@ -9,10 +9,11 @@ import Foundation
 
 extension UserModel {
     static func random(
+        id: String = String.random(),
         name: String = String.random(),
         imageName: String = "userImage\(Int.random(in: 1...6))",
         userTickets: [PurchasedTicketModel] = []
     ) -> UserModel {
-        return UserModel(name: name, imageName: imageName, userTickets: userTickets)
+        return UserModel(id: id, name: name, imageName: imageName, userTickets: userTickets)
     }
 }

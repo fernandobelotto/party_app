@@ -9,9 +9,10 @@ import Foundation
 
 extension TicketModel {
     static func random(
+        id: String = String.random(),
         description: String = "Ticket \(Int.random(in: 1...1000)) description",
         price: Double = Double.random(in: 1..<75)
     ) -> TicketModel {
-        return TicketModel(description: description, price: price)
+        return TicketModel(id: id, description: description, price: price)
     }
 }

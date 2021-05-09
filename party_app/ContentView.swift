@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var session = Session()
-    let eventsRepository = EventsRepository()
     
     init() {
 //        UITabBar.appearance().isTranslucent = false
@@ -19,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationView {
-                EventListView(eventsRepository: self.eventsRepository)
+                EventListView()
                     .navigationBarHidden(true)
             }
             .tabItem {
