@@ -8,33 +8,38 @@
 import SwiftUI
 
 struct EventPreviewWithTicket: View {
-    var purchasedTicket: PurchasedTicketModel
+    let purchasedTicket: PurchasedTicketModel
+        
     var body: some View {
-        VStack {
-            Image(purchasedTicket.event.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: .infinity, height: 152)
-            ZStack{
-                RoundedRectangle(cornerRadius: 0)
-                    .fill(Color.black)
-                    .frame(maxWidth: .infinity, maxHeight: 149)
+        ZStack {
+            Card(color: Color("Black"))
+                .frame(height: 288.0)
+            
+            VStack {
+                Image(self.purchasedTicket.event.imageName)
+                    .resizable()
+                    .frame(width: .infinity, height: 128)
                 VStack(alignment: .leading) {
-                    Text(purchasedTicket.event.name)
-                        .modifier(MyText(color: .white, type: .H2))
+                    Text(self.purchasedTicket.event.name)
+                        .modifier(MyText(color: Color("White"), type: .H2))
                         .frame(width: .infinity, alignment: .leading)
-                    Text(purchasedTicket.event.local)
-                        .modifier(MyText(color: .white, type: .Regular))
-                    Text(purchasedTicket.event.getDateAndTime())
-                        .modifier(MyText(color: .white, type: .Regular))
-                    TicketCard(label: purchasedTicket.ticket.description, price: String(purchasedTicket.ticket.displayablePrice), color: Color("8"))
-                }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 18)
-                .padding(.trailing, 18)
-                .padding(.top, 10)
-                .padding(.bottom, 18)
+                    Text(self.purchasedTicket.event.local)
+                        .modifier(MyText(color: Color("White"), type: .Small))
+                    Text(self.purchasedTicket.event.getDateAndTime())
+                        .modifier(MyText(color: Color("White"), type: .Small))
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 24.0)
+                NavigationLink(
+                    destination: TicketDetailView(ticket: self.purchasedTicket),
+                    label: {
+                        TicketCard(label: purchasedTicket.ticket.description, price: String(purchasedTicket.ticket.displayablePrice), color: Color("8"))
+                    }
+                )
+                .padding(20.0)
             }
-        }.cornerRadius(25)
+        }
+        .cornerRadius(25)
     }
 }
 
@@ -46,6 +51,7 @@ struct EventPreviewWithTicket_Previews: PreviewProvider {
                     imageName: "ChopadaDaAgricola"
                 )
             )
-        ).previewLayout(.sizeThatFits)
+        )
+        .previewLayout(.sizeThatFits)
     }
 }

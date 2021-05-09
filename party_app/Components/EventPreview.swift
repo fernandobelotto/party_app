@@ -10,28 +10,29 @@ import SwiftUI
 struct EventPreview: View {
     var event: EventModel
     var body: some View {
-        VStack {
-            Image(event.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: .infinity, height: 164)
-            ZStack{
-                RoundedRectangle(cornerRadius: 0)
-                    .fill(Color.black)
-                    .frame(maxWidth: .infinity, maxHeight: 100)
+        ZStack {
+            Card(color: Color("Black"))
+                .frame(height: 200.0)
+            
+            VStack {
+                Image(event.imageName)
+                    .resizable()
+                    .frame(height: 128.0)
                 VStack(alignment: .leading) {
                     Text(event.name)
-                        .modifier(MyText(color: .white, type: .H2))
-                        .frame(width: .infinity, alignment: .leading)
+                        .modifier(MyText(color: Color("White"), type: .H2))
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     Text(event.local)
-                        .modifier(MyText(color: .white, type: .Regular))
+                        .modifier(MyText(color: Color("White"), type: .Small))
                     Text(event.getDateAndTime())
-                        .modifier(MyText(color: .white, type: .Regular))
-                }.frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading, 18)
-                .padding(.bottom, 5)
+                        .modifier(MyText(color: Color("White"), type: .Small))
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 16.0)
+                .padding(.bottom, 24.0)
             }
-        }.cornerRadius(25)
+        }
+        .cornerRadius(25)
     }
 }
 

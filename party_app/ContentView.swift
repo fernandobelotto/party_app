@@ -12,32 +12,46 @@ struct ContentView: View {
     let eventsRepository = EventsRepository()
     
     init() {
-        UITabBar.appearance().isTranslucent = false
+//        UITabBar.appearance().isTranslucent = false
         UITabBar.appearance().barTintColor = UIColor(Color("Black"))
-      }
+    }
+    
     var body: some View {
         TabView {
-            EventListView(eventsRepository: self.eventsRepository)
-                .tabItem {
-                    Label("Home", systemImage: "house.fill")
-                }
+            NavigationView {
+                EventListView(eventsRepository: self.eventsRepository)
+                    .navigationBarHidden(true)
+            }
+            .tabItem {
+                Label("Home", systemImage: "house.fill")
+            }
             
-            SearchView()
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
-                }
-            
-            MyEventsView(session: session)
-                .tabItem {
-                    Label("Tickets", systemImage: "ticket.fill")
-                }
-            
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person.crop.circle.fill")
-                }
-            
-        }.accentColor(Color("1"))
+            NavigationView {
+                SearchView()
+                    .navigationBarHidden(true)
+            }
+            .tabItem {
+                Label("Search", systemImage: "magnifyingglass")
+            }
+         
+            NavigationView {
+                MyEventsView(session: session)
+                    .navigationBarHidden(true)
+            }
+            .tabItem {
+                Label("Tickets", systemImage: "ticket.fill")
+            }
+        
+            NavigationView {
+                ProfileView()
+                    .navigationBarHidden(true)
+            }
+            .tabItem {
+                Label("Profile", systemImage: "person.crop.circle.fill")
+            }
+        }
+        .edgesIgnoringSafeArea(.top)
+        .accentColor(Color("1"))
     }
 }
 
