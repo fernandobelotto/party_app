@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserModel: Identifiable {
+struct UserModel: Codable, Identifiable {
     var id = Double.random(in: 0...10000)
     let name: String
     let imageName: String
