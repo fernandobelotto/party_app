@@ -19,14 +19,19 @@ struct MyEventsView: View {
                     .modifier(MyText(color: .white, type: .H1))
                 
                 ForEach(session.getCurrentUser().userTickets) { ticket in
-                    EventPreviewWithTicket(purchasedTicket: ticket)
-                        .padding(.trailing)
-                        .padding(.leading)
-                        .padding(.bottom)
-                       
+                    NavigationLink(
+                        destination: EventDetailsView(event: ticket.event),
+                        label: {
+                            EventPreviewWithTicket(
+                                purchasedTicket: ticket
+                            )
+                        }
+                    )
+                    .padding(.horizontal, 24.0)   
                 }
             }
-        }.modifier(Background())
+        }
+        .modifier(Background())
     }
 }
 

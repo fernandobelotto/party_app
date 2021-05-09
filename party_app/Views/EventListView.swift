@@ -14,15 +14,18 @@ struct EventListView: View {
         VStack {
             ScrollView {
                 Text("Next to you")
-                    .frame(maxWidth: .infinity, alignment: Alignment.leading)
-                    .padding(.leading, 28)
-                    .modifier(MyText(color: .white, type: .H1))
+                    .modifier(MyText(color: Color("White"), type: .H1))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading, 32.0)
+                    .padding(.bottom, 0.0)
                 
                 ForEach(eventsRepository.getEvents()) { event in
-                    EventPreview(event: event)
-                        .padding(.trailing)
-                        .padding(.leading)
-                        .padding(.bottom)
+                    NavigationLink(
+                        destination: EventDetailsView(event: event),
+                        label: {
+                            EventPreview(event: event)
+                                .padding(.horizontal, 24.0)
+                        })
                 }
             }
         }.modifier(Background())
