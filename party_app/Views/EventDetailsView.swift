@@ -31,7 +31,7 @@ struct EventDetailsView: View {
                                     Text(event.name)
                                         .modifier(MyText(color: Color("White"), type: .H2))
                                         .fixedSize(horizontal: false, vertical: true)
-                                        .padding(.trailing, 64.0)
+                                        .padding(.trailing, 40.0)
                                     
                                     Spacer()
                                     
@@ -74,11 +74,12 @@ struct EventDetailsView: View {
                             }
                             .padding(.vertical, 16.0)
                             
-                            Button(action: {
-                                
-                            }) {
-                                MyButton(text: "Buy now", type: .Primary)
-                            }
+                            NavigationLink(
+                                destination: TicketChoiceView(self.event),
+                                label: {
+                                    MyButton(text: "Buy now", type: .Primary)
+                                }
+                            )
                             .padding(.vertical, 24.0)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -97,13 +98,8 @@ struct EventDetailsView: View {
 
 struct LocationCard: View {
     var body: some View {
-        ZStack (alignment: .center) {
-            Card(color: Color("White"))
-            
-            Image(systemName: "magnifyingglass")
-                .frame(height: 160.0)
-                .foregroundColor(Color("Black"))
-        }
+        Image("Location")
+            .frame(height: 160.0)
     }
 }
 
@@ -125,9 +121,15 @@ struct EventDetailsSheetView: View {
                 ScrollView {
                     VStack (alignment: .leading) {
                         ForEach(self.event.getParticipants()) { participant in
-                            Text(participant.name)
-                                .modifier(MyText(color: Color("White"), type: .H2))
-                                .padding(.vertical, 12.0)
+                            HStack (alignment: .center) {
+                                Image(participant.imageName)
+                                    .resizable()
+                                    .frame(width: 48.0, height: 48.0)
+                                    .padding(.trailing, 16.0)
+                                Text(participant.name)
+                                    .modifier(MyText(color: Color("White"), type: .H2))
+                            }
+                            .padding(.vertical, 12.0)
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
