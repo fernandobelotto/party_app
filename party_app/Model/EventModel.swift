@@ -8,8 +8,8 @@
 import Foundation
 
 
-struct EventModel: Identifiable {
-    var id = Double.random(in: 0...10000)
+struct EventModel: Codable, Identifiable {
+    var id: String
     let name: String
     let imageName: String
     let date: Date

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventListView: View {
-    var eventsRepository: EventsRepository
+    @ObservedObject var fetch = EventsRepository()
 
     var body: some View {
         VStack {
@@ -19,7 +19,7 @@ struct EventListView: View {
                     .padding(.leading, 32.0)
                     .padding(.bottom, 0.0)
                 
-                ForEach(eventsRepository.getEvents()) { event in
+                ForEach(fetch.events) { event in
                     NavigationLink(
                         destination: EventDetailsView(event: event),
                         label: {
@@ -34,6 +34,6 @@ struct EventListView: View {
 
 struct EventListView_Previews: PreviewProvider {
     static var previews: some View {
-        EventListView(eventsRepository: EventsRepository())
+        EventListView()
     }
 }
